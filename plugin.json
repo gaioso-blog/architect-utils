@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "aws-architect-utils",
+  "name": "aws architect utils",
   "version": "1.0.0",
   "description": "AWS architecture expert with pricing estimates, Well-Architected reviews, ADRs, diagrams, security assessments, cost optimization, and migration planning.",
   "author": {
