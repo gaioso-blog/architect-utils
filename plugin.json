@@ -5,7 +5,7 @@
   "description": "AWS architecture expert with pricing estimates, Well-Architected reviews, ADRs, diagrams, security assessments, cost optimization, and migration planning.",
   "author": {
     "name": "Gaioso",
-    "url": "https://github.com/gaioso"
+    "url": "https://github.com/gaioso-blog"
   },
   "keywords": [
     "aws",
@@ -55,6 +55,7 @@
     "spot",
     "graviton"
   ],
-  "homepage": "https://github.com/gaioso/power-aws-architect",
+  "homepage": "https://github.com/gaioso-blog/architect-utils",
+  "repository": "https://github.com/gaioso-blog/architect-utils",
   "license": "MIT"
 }
