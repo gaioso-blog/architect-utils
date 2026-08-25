@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "aws-pricing-calculator": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "sample-aws-pricing-calculator-mcp@latest"]
+    },
+    "aws-pricing-api": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["awslabs.aws-pricing-mcp-server@latest", "--allow-write"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    }
+  }
+}
