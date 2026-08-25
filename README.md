@@ -40,13 +40,13 @@ AWS architecture expert power for Kiro. Brings pricing estimates, Well-Architect
 2. Open the Powers panel
 3. Click **Add Custom Power**
 4. Select **Import power from GitHub**
-5. Enter: `https://github.com/gaioso-blog/architect-utils`
+5. Enter: `https://github.com/gaioso-blog/aws-architect-utils`
 6. Click **Install**
 
 ### Manual
 
 ```bash
-git clone https://github.com/gaioso-blog/architect-utils ~/.kiro/powers/architect-utils
+git clone https://github.com/gaioso-blog/aws-architect-utils ~/.kiro/powers/architect-utils
 ```
 
 Then in Kiro IDE: Powers panel → Add Custom Power → Import power from folder → select the directory.
@@ -88,6 +88,7 @@ You don't need to do anything. Mention "I want to estimate the cost of a serverl
 architect-utils/
 ├── plugin.json                          # Power manifest and activation keywords
 ├── mcp.json                             # MCP server configuration
+├── POWER.md                             # Power metadata (name, description, keywords)
 ├── README.md                            # This file
 ├── steering/
 │   └── well-architected.md              # WA Framework steering context
@@ -104,3 +105,22 @@ architect-utils/
         ├── SKILL.md
         └── references/                  # AWS icon reference files for draw.io
 ```
+
+## Troubleshooting
+
+**`npx: command not found`**
+Node.js is not installed or not in PATH. Install it from [nodejs.org](https://nodejs.org) and make sure `node` and `npx` are accessible from your terminal.
+
+**`uvx: command not found`**
+The `uv` package manager is not installed. Run:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+Then restart your terminal so `uvx` is available in PATH.
+
+**Pricing MCP returns errors or no data**
+The `aws-pricing-api` MCP requires valid AWS credentials. Verify with:
+```bash
+aws sts get-caller-identity
+```
+If it fails, configure credentials via `aws configure` or set the `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` environment variables. The minimum required permissions are `pricing:GetProducts` and `pricing:DescribeServices`.
