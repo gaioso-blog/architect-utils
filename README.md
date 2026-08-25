@@ -1,4 +1,4 @@
-# power-aws-architect
+# AWS Architect Utils
 
 AWS architecture expert power for Kiro. Brings pricing estimates, Well-Architected reviews, ADRs, diagrams, security assessments, cost optimization, and migration planning into your Kiro sessions — activated automatically when you talk about AWS.
 
@@ -34,29 +34,19 @@ AWS architecture expert power for Kiro. Brings pricing estimates, Well-Architect
 
 ## Installation
 
-### Option 1: Kiro IDE (recommended)
+### Kiro IDE
 
 1. Open Kiro IDE
 2. Open the Powers panel
 3. Click **Add Custom Power**
 4. Select **Import power from GitHub**
-5. Enter the repository URL: `https://github.com/gaioso/power-aws-architect`
-6. Click Install
+5. Enter: `https://github.com/gaioso-blog/architect-utils`
+6. Click **Install**
 
-### Option 2: Kiro CLI
-
-```bash
-# Coming soon via kiro-cli powers install
-```
-
-### Option 3: Manual install
+### Manual
 
 ```bash
-# Clone the repository
-git clone https://github.com/gaioso/power-aws-architect ~/.kiro/powers/aws-architect
-
-# Or copy from this project
-cp -r power-aws-architect ~/.kiro/powers/aws-architect
+git clone https://github.com/gaioso-blog/architect-utils ~/.kiro/powers/architect-utils
 ```
 
 Then in Kiro IDE: Powers panel → Add Custom Power → Import power from folder → select the directory.
@@ -95,13 +85,12 @@ You don't need to do anything. Mention "I want to estimate the cost of a serverl
 ## Structure
 
 ```
-power-aws-architect/
+architect-utils/
 ├── plugin.json                          # Power manifest and activation keywords
 ├── mcp.json                             # MCP server configuration
 ├── README.md                            # This file
-├── dev.kiro/
-│   └── steering/
-│       └── well-architected.md          # WA Framework steering context
+├── steering/
+│   └── well-architected.md              # WA Framework steering context
 └── skills/
     ├── wa-review/SKILL.md
     ├── cost-optimization-audit/SKILL.md
